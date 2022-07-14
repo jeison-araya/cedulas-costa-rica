@@ -11,8 +11,7 @@ exceptions = {
 
 @app.get("/padron/cedula/{cedula:str}")
 def obtener_por_cedula(cedula: str):
-    
-    persona = database["padron"].find_one({"cedula": cedula})
+    persona = database["padron"].find_one({"cedula": cedula}, {"_id": False})
     
     if not persona:
         raise exceptions["PersonaNoEncontrada"]
