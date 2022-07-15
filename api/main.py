@@ -35,7 +35,7 @@ class Persona(BaseModel):
     segundo_apellido: str
 
 
-padron = database["padron_1"]
+padron = database["padron"]
 
 @app.get("/padron/cedula/{cedula:int}", response_model=Persona)
 def obtener_por_cedula(cedula: int):
