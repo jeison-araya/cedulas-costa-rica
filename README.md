@@ -2,8 +2,15 @@
 API para consultar el padrón electoral generado por el Tribunal Supremo de Elecciones de Costa Rica
 
 
+# Requisitos
+
+1. Instancia de `MongoDB`.
+2. Instalar `Python 3.10 o superior` o `Docker`
+
+
 # Configuración local
 
+## Utilizando python
 1. Crear un entorno virtual en python
     - `python -m venv venv`
 2. Activar entorno virtual
@@ -13,8 +20,20 @@ API para consultar el padrón electoral generado por el Tribunal Supremo de Elec
 3. Instalar dependecias
     - `pip install -r requirements.txt`
 
-4. Ejecutar API
+4. Crear archivo con variables
+    - Crear archivo de configuración: `cp .example.env .env`
+    - Reemplaza los valores del archivo `.env`
+
+5. Ejecutar API
     - `uvicorn api.main:app --reload`
+
+
+## Utilizando docker-compose
+1. Crear archivo con variables
+    - Crear archivo de configuración: `cp .example.env .env`
+    - Reemplaza los valores del archivo `.env`
+
+2. Ejecutar `docker-compose up -d`
 
 # Actualizar padrón utilizando mongoimport
 
