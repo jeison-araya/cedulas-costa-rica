@@ -44,3 +44,14 @@ API para consultar el padrón electoral generado por el Tribunal Supremo de Elec
 - Ejecutar el siguiente comando:
     `mongoimport -h <hostname><:port> --u <username> --p <password> -d <database>  -c padron --authenticationDatabase=admin --type csv -f cedula,codigo_electoral,relleno,fecha_caducidad,junta,nombre,primer_apellido,segundo_apellido --file PADRON_COMPLETO.txt 
     `
+
+
+    # Deployments
+
+    ## Heroku
+
+    Este proyecto tiene la configuración necesaria para realizar deployments en Heroku.
+
+    - El archivo `Procfile` contiene la instrucción para ejecutar el API.
+
+    - El `runtime.txt` contiene la versión de python a utilizar.  
