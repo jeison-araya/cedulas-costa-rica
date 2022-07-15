@@ -25,7 +25,7 @@ def obtener_por_cedula(cedula: int):
 
     Formato de la cédula: numero de cédula sin guiones, sin puntos y longitud igual a 9.
     """
-    if cedula < 1000000000 or cedula > 9999999999:
+    if 1000000000 < cedula > 9999999999:
         raise exceptions["FormatoCedulaNoValida"]
 
     persona = padron.find_one({"cedula": cedula})
