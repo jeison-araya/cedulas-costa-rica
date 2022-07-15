@@ -2,8 +2,8 @@
 API padrón electoral Costa Rica.
 """
 from fastapi import FastAPI, HTTPException, status
-from pydantic import BaseModel
 from api.database import database
+from api.schemas import Persona
 
 app = FastAPI()
 
@@ -15,27 +15,8 @@ exceptions = {
 }
 
 
-class Persona(BaseModel):
-    """
-    Persona
-
-    Representa una persona que pertence al padrón electoral.
-
-    Atributos:
-
-    - cedula: Número de cédula del ciudadano sin guiones,
-              sin puntos y longitud igual a 9.
-    - nombre: Nombre completo del ciudadano
-    - primer_apellido: Primer apellido
-    - segundo_apellido Segundo apellido
-    """
-    cedula: str
-    nombre: str
-    primer_apellido: str
-    segundo_apellido: str
-
-
 padron = database["padron"]
+
 
 @app.get("/padron/cedula/{cedula:int}", response_model=Persona)
 def obtener_por_cedula(cedula: int):
