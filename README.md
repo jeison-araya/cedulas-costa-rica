@@ -42,7 +42,7 @@ API para consultar el padrón electoral generado por el Tribunal Supremo de Elec
     - Recuerda agregar al PATH (Windows) y/o brindar los permisos necesarios (Linux o Mac).
 - Descargar el [padrón electoral completo](https://www.tse.go.cr/descarga_padron.htm)
 - Ejecutar el siguiente comando:
-    `mongoimport -h <hostname><:port> --u <username> --p <password> -d <database>  -c padron --authenticationDatabase=admin --type csv -f cedula,codigo_electoral,relleno,fecha_caducidad,junta,nombre,primer_apellido,segundo_apellido --file PADRON_COMPLETO.txt 
+    `mongoimport -h <hostname><:port> -u <username> -p <password> -d <database>  -c padron --authenticationDatabase=admin --type csv -f cedula,codigo_electoral,relleno,fecha_caducidad,junta,nombre,primer_apellido,segundo_apellido --file PADRON_COMPLETO.txt 
     `
 
 
