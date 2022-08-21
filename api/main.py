@@ -11,12 +11,12 @@ exceptions = {
     "PersonaNoEncontrada": HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                                          detail="E001: Persona no encontrada"),
     "FormatoCedulaNoValida": HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
-                                         detail="E002: Formato de cédula no válido"),
+                                           detail="E002: Formato de cédula no válido"),
 }
 
 
 padron = database["padron"]
-padron.create_index("cedula", unique = True)
+padron.create_index("cedula", unique=True)
 
 
 @app.get("/padron/cedula/{cedula:int}", response_model=Persona)

@@ -14,7 +14,7 @@ def get_database():
     """
     client = MongoClient(os.environ["MONGODB_URL"])
     db_name = os.environ.get("DB_NAME", "padron")
-    
+
     return client[db_name]
 
 

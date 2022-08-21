@@ -1,3 +1,8 @@
+# pylint: disable=no-name-in-module
+# pylint: disable=too-few-public-methods
+"""
+Schemas classes
+"""
 from pydantic import BaseModel
 
 
