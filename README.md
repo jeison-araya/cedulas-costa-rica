@@ -55,3 +55,10 @@ API para consultar el padrón electoral generado por el Tribunal Supremo de Elec
     - El archivo `Procfile` contiene la instrucción para ejecutar el API.
 
     - El `runtime.txt` contiene la versión de python a utilizar.  
+
+## Pruebas
+
+### Estética del código con Pylint
+
+- Verifica que se cumplan las convensiones de PEP 8.
+- Ejecutar el siguiente comando: `pylint api`
