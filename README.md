@@ -60,5 +60,5 @@ API para consultar el padrón electoral generado por el Tribunal Supremo de Elec
 
 ### Estética del código con Pylint
 
-- Verifica que se cumplan las convensiones de PEP 8.
+- Verifica que se cumplan las convenciones de PEP 8.
 - Ejecutar el siguiente comando: `pylint api`
