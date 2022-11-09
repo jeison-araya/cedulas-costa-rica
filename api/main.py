@@ -14,9 +14,7 @@ exceptions = {
                                            detail="E002: Formato de cédula no válido"),
 }
 
-
 padron = database["padron"]
-padron.create_index("cedula", unique=True)
 
 
 @app.get("/padron/cedula/{cedula:int}", response_model=Persona)
