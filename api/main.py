@@ -17,8 +17,8 @@ exceptions = {
 padron = database["padron"]
 
 
-@app.get("/padron/cedula/{cedula:int}", response_model=Persona)
-def obtener_por_cedula(cedula: int):
+@app.get("/padron/cedula/{cedula:str}", response_model=Persona)
+def obtener_por_cedula(cedula: str):
     """
     GET - Obtener persona por número de cédula.
 
